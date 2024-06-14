@@ -1,5 +1,3 @@
-// src/components/PasswordForm.tsx
-
 import React, { useState, FormEvent, ChangeEvent } from "react";
 
 interface PasswordFormProps {

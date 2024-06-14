@@ -1,5 +1,3 @@
-// src/components/PasswordList.tsx
-
 import React from "react";
 
 interface Password {

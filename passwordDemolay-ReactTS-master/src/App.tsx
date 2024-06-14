@@ -15,7 +15,7 @@ interface Password {
 
 const App: React.FC = () => {
   const [passwords, setPasswords] = useState<Password[]>([]);
-  const [currentPassword, setCurrentPassword] = useState<string | null>(null);
+  const [currentPassword, setCurrentPassword] = useState<Password | null>(null);
   const [currentCarousel, setCurrentCarousel] = useState<string>("gold");
 
   useEffect(() => {
@@ -33,9 +33,14 @@ const App: React.FC = () => {
     const newPassword: Password = {
       id: Date.now().toString(),
       value: password,
-      chamada: false,
+      chamada: true,
     };
-    setPasswords([newPassword, ...passwords]);
+
+    if (currentPassword) {
+      setPasswords([currentPassword, ...passwords]);
+    }
+
+    setCurrentPassword(newPassword);
   };
 
   const handleClickPassword = (id: string) => {
@@ -51,20 +56,15 @@ const App: React.FC = () => {
       (password) => password.id === id
     );
     if (clickedPassword) {
-      setCurrentPassword(clickedPassword.value);
+      setCurrentPassword(clickedPassword);
 
       const audio = new Audio(soundFile);
       audio.play();
     }
   };
 
-  const preparacaoPasswords = passwords
-    .filter((password) => !password.chamada)
-    .slice(0, 3);
-
-  const halfIndex = Math.ceil(preparacaoPasswords.length / 2);
-  const firstColumnPasswords = preparacaoPasswords.slice(0, halfIndex);
-  const secondColumnPasswords = preparacaoPasswords.slice(halfIndex);
+  const preparacaoPasswords = passwords.filter((password) => !password.chamada);
+  const chamadaPasswords = passwords.filter((password) => password.chamada);
 
   useEffect(() => {
     const carouselTimeout = setTimeout(() => {
@@ -99,7 +99,7 @@ const App: React.FC = () => {
         <div className="left-side">
           <div className="password-container">
             {currentPassword ? (
-              <div className="password">{currentPassword}</div>
+              <div className="password">{currentPassword.value}</div>
             ) : (
               <div className="password"></div>
             )}
@@ -108,27 +108,9 @@ const App: React.FC = () => {
         </div>
         <div className="right-side">
           <div className="preparacao-passwords">
-            <h2>Senhas em preparação</h2>
-            <div className="password-columns">
-              <div className="password-column">
-                <PasswordList
-                  passwords={firstColumnPasswords}
-                  onClickPassword={handleClickPassword}
-                />
-              </div>
-              <div className="password-column">
-                <PasswordList
-                  passwords={secondColumnPasswords}
-                  onClickPassword={handleClickPassword}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="chamada-passwords">
+            <h2>Senhas que já foram chamadas</h2>
             <PasswordList
-              passwords={passwords
-                .filter((password) => password.chamada)
-                .slice(0, 3)}
+              passwords={chamadaPasswords.slice(0, 4)}
               onClickPassword={handleClickPassword}
             />
           </div>
