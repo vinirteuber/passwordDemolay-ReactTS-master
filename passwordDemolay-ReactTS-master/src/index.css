@@ -1,0 +1,209 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../src/assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Estilos para o lado esquerdo (senha principal) */
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 100px;
+}
+
+.password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.password {
+  font-size: 216px;
+  font-weight: bold;
+}
+
+/* Estilos para o lado direito (senhas anteriores) */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+}
+
+.card {
+  width: 800px;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.password-chamada {
+  background-color: #4b4b4b63;
+  color: white;
+  margin: 10px;
+  display: none;
+}
+
+.password-preparacao {
+  background-color: #ffffff;
+}
+
+/* Estilos para PasswordForm */
+.password-form {
+  margin-bottom: 20px;
+}
+
+.password-input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.submit-button {
+  padding: 5px 10px;
+}
+
+/* Estilos para PasswordList */
+
+.password-card {
+  cursor: pointer;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  font-weight: bold;
+}
+
+/* Estilos para as colunas de senha */
+.password-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-column {
+  display: flex;
+
+  justify-content: center;
+}
+
+/* Estilos para as senhas chamadas */
+.chamada-passwords {
+  width: 60%;
+}
+
+.chamada-passwords h2 {
+  text-align: center;
+}
+
+.chamada-passwords .password-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  display: none;
+}
+
+.all {
+  margin-left: 150px;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+img {
+  margin-top: 1rem;
+  width: 150px;
+  border-radius: 12px;
+}
+
+.slick-prev,
+.slick-next {
+  margin-left: 4rem;
+  display: none !important;
+}
+
+h2 {
+  color: white;
+}
+
+input {
+  margin-top: 2rem;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  padding: 5px;
+}
+
+.submit-button {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  padding: 5px;
+}
+
+.password-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 45pt;
+  width: 300px;
+  height: 90px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  font-weight: bold;
+}
+
+.password-form {
+  margin-left: 6rem;
+}
+
+.slick-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bronze {
+  border: 4px solid #5a5a59e7;
+  border-radius: 12px;
+}
+
+.ouro {
+  border-radius: 12px;
+  border: 4px solid #ffe600e7;
+}
+
+.apoiador {
+  border-radius: 12px;
+  border: 4px solid #575552e7;
+}
