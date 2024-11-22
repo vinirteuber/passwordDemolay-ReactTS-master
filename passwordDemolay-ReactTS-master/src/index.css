@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url("../src/assets/background.png");
+  background-color: #830404;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -175,7 +175,7 @@ input {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 60pt;
+  font-size: 97pt;
   width: 400px;
   height: 100px;
   margin-bottom: 20px;
@@ -199,8 +199,9 @@ input {
 }
 
 .ouro {
+  background-color: aquamarine;
   border-radius: 12px;
-  border: 4px solid #ffe600e7;
+  width: 190px;
 }
 
 .apoiador {
