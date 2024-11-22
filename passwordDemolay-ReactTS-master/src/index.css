@@ -31,6 +31,7 @@ body {
 }
 
 .password-container {
+  margin-top: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +55,7 @@ body {
   justify-content: center;
   text-align: center;
   width: 50%;
+  font-size: 19pt;
 }
 
 .card {

@@ -79,7 +79,7 @@ const App: React.FC = () => {
         </div>
         <div className="right-side">
           <div className="preparacao-passwords">
-            <h2>Senhas anteriores</h2>
+            <h2>SENHAS ANTERIORES</h2>
             <PasswordList
               passwords={chamadaPasswords.slice(0, 4)}
               onClickPassword={handleClickPassword}
